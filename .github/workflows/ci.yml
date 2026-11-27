@@ -13,7 +13,7 @@ jobs:
     name: ShellCheck install.sh
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7 # ratchet:actions/checkout@v7
+      - uses: actions/checkout@v7.0.1 # ratchet:actions/checkout@v7
       - name: Run ShellCheck
         uses: ludeeus/action-shellcheck@00b27aa7cb85167568cb48a3838b75f4265f2bca # v2.0.0 (2024-06-20)
         with:
@@ -24,7 +24,7 @@ jobs:
     name: echo.sh smoke test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7 # ratchet:actions/checkout@v7
+      - uses: actions/checkout@v7.0.1 # ratchet:actions/checkout@v7
         with:
           fetch-depth: 0
       - name: Run echo.sh against real git range and assert output
@@ -39,7 +39,7 @@ jobs:
     name: Validate SKILL.md frontmatter & structure
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7 # ratchet:actions/checkout@v7
+      - uses: actions/checkout@v7.0.1 # ratchet:actions/checkout@v7
       - name: Set up Python
         uses: actions/setup-python@v7 # ratchet:actions/setup-python@v7
         with:
@@ -76,7 +76,7 @@ jobs:
     name: Lint Markdown
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7 # ratchet:actions/checkout@v7
+      - uses: actions/checkout@v7.0.1 # ratchet:actions/checkout@v7
       - name: Lint Markdown files
         uses: DavidAnson/markdownlint-cli2-action@v25 # ratchet:DavidAnson/markdownlint-cli2-action@v25
         with:
